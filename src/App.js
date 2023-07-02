@@ -1,65 +1,47 @@
 import React from 'react';
 import {
-  ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  Heading,
+  ChakraProvider,
   Container,
-  Image,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
   HStack,
-  extendTheme,
-  Icon,
+  Image,
+  Link,
+  Spacer,
+  Text,
+  theme,
+  VStack,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import IconLinks from './IconLinks';
-
-const theme = extendTheme({
-  fonts: {
-    heading: `'Comfortaa', sans-serif`,
-    body: `'Comfortaa', sans-serif`,
-  },
-});
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         {/* All links will go here */}
-        <HStack id="header">
+        <Flex>
           <Link colcolor="teal.500" href="" fontSize="3xl">
             pranavchati
           </Link>
-          <Link
-            colcolor="teal.500"
-            href="/resume"
-            fontSize="2xl"
-            rel="noreferrer"
-          >
-            resume
-          </Link>
-          {/* <Link
-            colcolor="teal.500"
-            href="/projects"
-            fontSize="2xl"
-            rel="noreferrer"
-          >
-            projects
-          </Link> */}
-          <Link
-            colcolor="teal.500"
-            href="/contact_me"
-            fontSize="2xl"
-            rel="noreferrer"
-          >
-            contact me
-          </Link>
-          <ColorModeSwitcher justifySelf="flex-end" />
-        </HStack>
-
+          <Spacer />
+          <HStack id="header" paddingBottom={10}>
+            <Link
+              href="../public/ChatiPranavResume.pdf"
+              download={true}
+              fontSize="2xl"
+            >
+              resume
+            </Link>
+            <Link href="mailto:chati.2@osu.edu" fontSize="2xl">
+              contact me
+            </Link>
+            <ColorModeSwitcher />
+          </HStack>
+        </Flex>
         {/* Textual Information Here */}
         <VStack spacing={4} id="main-body">
           <Image
@@ -80,7 +62,6 @@ function App() {
           </Container>
           <IconLinks />
         </VStack>
-        {/* Footer */}
       </Box>
     </ChakraProvider>
   );
