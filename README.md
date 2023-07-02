@@ -3,9 +3,10 @@
 ## Author: Pranav Chati
 
 ### Todos
-[ ] Fix favicon issues and add 👨🏽‍💻 as website title
+[x] Fix favicon issues and add 👨🏽‍💻 as website title
 [ ] Make sure website changes to screen dimensions
 [ ] Currently have margin left and right pre-defined as links, is there a better way to do it?
+[ ] Add "I am Student, Enterpreneur, Programmer" animation underneath name
 
 ## Learnings
 During this project, the coolest thing I kind of learned was how to better use the terminal. Specifically when I was initially trying to figure out the icons to use, I was initially playing around with FontAwesome; however, I didn't entirely like their fonts. I used `npm list` to figure out which dependencies that I currently have, and which ones I didn't need. I uninstalled the FontAwesome dependecies. It was cool to learn that such things exist though. 
